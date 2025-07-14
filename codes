@@ -1,0 +1,118 @@
+✅ 2. Sum of All Elements
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    int r, c;
+    cin >> r >> c;
+    int a[100][100], total = 0;
+
+    for (int i = 0; i < r; i++)
+        for (int j = 0; j < c; j++) {
+            cin >> a[i][j];
+            total += a[i][j];
+        }
+
+    cout << "Sum of all elements: " << total << endl;
+    return 0;
+}
+✅ 3. Sum of Diagonal Elements (works only for square matrices)
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int a[100][100], diag = 0;
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++) {
+            cin >> a[i][j];
+            if (i == j)
+                diag += a[i][j];
+        }
+
+    cout << "Sum of diagonal: " << diag << endl;
+    return 0;
+}
+✅ 4. Sum of Boundary Elements
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    int r, c;
+    cin >> r >> c;
+    int a[100][100], bound = 0;
+
+    for (int i = 0; i < r; i++)
+        for (int j = 0; j < c; j++) {
+            cin >> a[i][j];
+            if (i == 0 || j == 0 || i == r - 1 || j == c - 1)
+                bound += a[i][j];
+        }
+
+    cout << "Sum of boundary elements: " << bound << endl;
+    return 0;
+}
+✅ 5. Row with Maximum Sum
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    int r, c;
+    cin >> r >> c;
+    int a[100][100];
+    int maxRowSum = -1e9, maxRow = 0;
+
+    for (int i = 0; i < r; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < c; j++) {
+            cin >> a[i][j];
+            rowSum += a[i][j];
+        }
+        if (rowSum > maxRowSum) {
+            maxRowSum = rowSum;
+            maxRow = i;
+        }
+    }
+
+    cout << "Row with max sum: " << maxRow << " (sum = " << maxRowSum << ")" << endl;
+    return 0;
+}
+✅ 6. Transpose of Matrix
+cpp
+Copy
+Edit
+#include <iostream>
+using namespace std;
+
+int main() {
+    int r, c;
+    cin >> r >> c;
+    int a[100][100];
+
+    for (int i = 0; i < r; i++)
+        for (int j = 0; j < c; j++)
+            cin >> a[i][j];
+
+    cout << "Transpose:" << endl;
+    for (int j = 0; j < c; j++) {
+        for (int i = 0; i < r; i++)
+            cout << a[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
