@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form action="#" method="post">
+    
+    <label for="name">Name (Only letters, min 3):</label><br>
+    <input type="text" id="name" name="name" pattern="[A-Za-z]{3,}" title="Only letters, minimum 3 characters" required><br><br>
+
+    <label for="email">Email (required):</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="age">Age (18-80):</label><br>
+    <input type="number" id="age" name="age" min="18" max="80" required><br><br>
+
+    <label for="phone">Phone (10 digits):</label><br>
+    <input type="text" id="phone" name="phone" pattern="\d{10}" title="Exactly 10 digits" required><br><br>
+    
+    <label for="password">Password (lenght 6-12)</label><br>
+    <input type="password" id="password" name="password" min="6" max="12" required><br><br>
+
+    <label for="Confirm password"> Confirm Password</label><br>
+    <input type="password" id="Confirm password" name=" Confirm password" min="6" max="12" required><br><br>
+
+     <p>Gender</p>
+    <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Others</label><br><br>
+  
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
